@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade1_2.html</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+    var nomeFun1 = prompt('O nome do funcionário:');
+    var meses1= Number(prompt('O tempo de serviço deste em meses:'));
+    var salar1= Number (prompt('O salário médio em reais:'));
+    var idade= Number(prompt('A idade do funcionário em anos:'));
+    output.innerHTML = `
+   
+    Nome: ${nomeFun1}<br>
+Tempo de serviço: ${meses1}<br>
+Salário médio: ${salar1}<br>
+Idade: ${idade}<br>
+   
+    `;
+   if(meses1>=12){
+       var abono= Number((salar1 *10/100));
+       var salar1final=Number(salar1+abono+1*idade);
+   }
+   
+   else{
+    var abono= Number(salar1*0);
+    var salar1final=Number(salar1+abono+1*idade)
+   }
+   output.innerHTML =`
+   Abono salarial: ${abono} <br>
+   Próximos salários: ${salar1final} <br>
+ 
+   `;
+   if(salar1<=1500){
+       var aliq = Number(5);
+       var contrib = Number(salar1*aliq/100);
+   } else if(salar1>1500 && salar1<=2500){
+    var aliq = Number(10);
+    var contrib = Number(salar1*aliq/100);
+   } else if(salar1>2500 && salar1<=3500){
+    var aliq = Number(13);
+    var contrib = Number(salar1*aliq/100);
+   } else if(salar1>3500) {
+    var aliq = Number(15);
+    var contrib = Number(salar1*aliq/100);
+ 
+   };
+   output.innerHTML=`
+   Nome: ${nomeFun1}<br>
+    Tempo de serviço: ${meses1} meses.<br>
+    Salário médio: R$ ${salar1}.<br>
+    Idade: ${idade} anos.<br>
+─────────────────────────────────────────────────────────────<br>
+    Abono salarial: R$ ${abono}.<br>
+    Próximos salários: R$ ${salar1final}.<br>
+    Contribuição para o INSS: R$ ${contrib}.<br>
+ 
+   `;
+   
+ 
+    </script>
+   
+</body>
+</html>
