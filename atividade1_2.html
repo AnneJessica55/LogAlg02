@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabarito da atividade 1_2</title>
+</head>
+<body>
+    
+    <div id="output"></div>
+   <script>
+       abono=0;
+       //
+       var nome=prompt(`Digite o nome do funcionário:`);
+       var tempoServico = parseFloat(prompt(`Digite o tempo de serviço em meses:`));
+       var salarioMedio = parseFloat(prompt(`Digite o salário médio em reais:`));
+       var idade = parseInt(prompt(`Digite a idade do Funcionário:`));
+       var dados =`
+       Nome: ${nome}.<br>
+       Tempo de Serviço: ${tempoServico} meses.<br>
+       Salário Médio: R$ ${salarioMedio}.<br>
+       Idade: ${idade} anos`;
+       output.innerHTML = dados;
+       if(tempoServico>12){
+           //Calcula 10% do salário médio como abono;
+           abono = idade*1 + salarioMedio*10/100
+           var proximoSalario= abono + salarioMedio
+
+       }; else{
+           abono = idade
+           var proximoSalario= abono + salarioMedio
+
+           
+       };
+       
+       dados+=`
+       Abono: R$${abono}.<br>
+       Próximo Salário:R$${proximoSalario}.`;
+       output.innerHTML= dados;
+       var inss=0;
+       if(proximoSalario<=1500){
+           inss=proximoSalario*5/100
+
+       } else if(proximoSalario<=2500){
+           inss=proximoSalario*10/100
+       }
+       else if(proximoSalario<=3500){
+           inss=proximoSalario*132/100
+
+       }
+       else{
+           inss=proximoSalario*15/100
+       }
+
+
+   </script> 
+</body>
+</html>

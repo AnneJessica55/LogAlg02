@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Gabarito e anotações Atividade 1_1</title>
+</head>
+<body>
+    <script>
+        //Gabarito da Atividade 1_1
+        //Passo 5 - Criar duas variáveis (usando exatamente o nome pedido number1 e number2);
+        //Sempre que for pedido um função vai vit função(), caso não tenha é uma var, quando tiver {} é um objeto, quando tiver [] é uma matriz;
+        //Passo 6 - Peça para digitar 2 números pelo prompt;
+        var number1=parseFloat(prompt(`Digite um número:`));
+        var number2=parseFloat(prompt(`Digite outro número:`));
+        //Prompt é uma palavra reservada porque já existe uma função com esse nome na linguagem javascript
+        //Passo 7 - Mandar aparecer no console:
+        console.log(number1, number2);
+        //Pode usar também console.log(parseFloat(number1)+parseFloat(number2));
+        //Passo 8 - Exibir a soma de number1 e number2 - todos os campos de formulários sempre retornam strings;
+        //Number() é um método (protótipo para trabalhar com classes), e o o parseFloat não trabalha com classes, já nasceu com javascript;
+        console.log(number1 + number2);
+        //Passo 9 - Exiba também o resultado da subtração entre as duas variáveis;
+        console.log(number1-number2);
+        //Passo 10, 11 e 13 - exiba os resultados utilizando o método document.write;
+        document.write(`O resultado da soma entre ${number1} e ${number2} é ${number1+number2}.<br> A subtração de ${number1} e ${number2} é igual a ${number1-number2}.`);
+        //O texto pode vir livre dentro das crases, as variáveis precisam estar entre ${var};
+        //Usar <br> para pular de linha (<br> é uma tag desatualizada);
+        
+    </script>
+</body>
+</html>
