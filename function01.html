@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções 01</title>
+</head>
+
+<body>
+
+    <button onclick="escreveNaTela()">Clique-me!</button>
+
+    <div id="tela"></div>
+
+    <script>
+
+        // Cria uma função
+        function escreveNaTela(mensagem , mensagem2) {
+            tela.innerHTML = mensagem + ''+mensagem2;
+        }
+
+        // Chamando a função
+        escreveNaTela('Olá mundo!','Estou com fome');
+        // a função só é executada quando clicar, como mostra na linha 12;
+
+    </script>
+
+</body>
+
+</html>

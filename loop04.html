@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Loops 04</title>
+</head>
+<body>
+<script>
+    // No while o contador tem que estar fora da estrutura, ele só aceita um bloco;
+    //O loop do while sempre roda pelo menos uma vez;
+    let contador=0;
+    while(contador<11){
+        console.log(contador);
+        contador++
+    }
+    //Criando uma coleção;
+    let frutas = ['maçã','banana','abacate','abacaxi','morango']
+    let contador2 = 0;
+    while (frutas[contador2]){
+        //while é enquanto (fruta[contador2]) existir;
+        //Outra forma de fazer é while(contador2<=frutas.length)
+        console.log(frutas[contador2])
+        contador2++;
+    }
+
+</script>
+</body>
+</html>

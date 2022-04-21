@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo com Loops 03</title>
+</head>
+<body>
+    <script>
+document.write(`Tabuada Completa:<br><br>`);
+for(var x=1; x<=10; x++){ 
+    //esse primeiro FOR  vai representar o primeiro fator da multiplicação;
+    for( var y=1; y<=10; y++){
+        //Para representar o segundo fator, utiliza-se um outro for aninhado;
+        document.write (` ${x} x ${y} = ${x * y}.<br>`);
+    }
+    //Esse <hr> só serve para colocar uma linha para separar as tabuadas;
+    document.write (`<hr>`);
+}  
+       
+    </script>
+</body>
+</html>

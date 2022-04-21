@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Exemplo com Loops 01</title>
+    </head>
+    <body>
+        <script>
+            console.log(`Tabuada`);
+            //Loop usando FOR;
+            for(var indice = 0; indice<11; indice ++){
+                //var pode está dentro do comando for;
+                //contexto são bocos de memória do sistema;
+                //O bloco 1 (var indice = 0) só é executado uma vez;
+                //Nas vezes seguintes a primeira, o terceiro bloco (indice++) é executado ao invés do primeiro;
+     
+     
+                console.log(` A tabuada do 5: é 5 x ${indice} = ${5*indice}.`);
+            }
+                let cars= ['Fusca', 'Opala', 'Fiat 147', 'Chevete', 'Corola']
+                for(let x = 0; x < cars.length;x ++){
+                    //cars.legth vai até o tamanho final do vetor cars
+                    document.write(`${cars[x]}<br>`);
+                }
+           
+        </script>
+    </body>
+    </html>
+    
