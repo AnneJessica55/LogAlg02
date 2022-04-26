@@ -26,7 +26,7 @@
 
         <tr>
             <td>Nome do funcionário:</td>
-            <td><input type="text" id="name"></td>
+            <td><input type="text" id="nome"></td>
         </tr>
 
         <tr>
@@ -106,31 +106,29 @@
          *    O aplicativo está dentro da 'Função sem nome', executada ao clicar no botão.
          */
         btnCalc.onclick = function () {
-        var formName = name.value;
-        var formServiceTime = Number(serviceTime.value);
-        var formAvaragePay = Number(avaragePay.value);
-        var formAge = Number(age.value);
-        var formAllowance = Number(allowance.value);
-        var formNextPay=Number(nextPay.value);
-        var formInss=Number(inss.value);
-        if(formServiceTime>=12){
-       var formAllowance= Number((formAvaragePay *10/100));
-       var formNextPay=Number(formAvaragePay+formAllowance+1*formAge);
+        var formAveragePay = parseFloat(averagePay.value)
+         if(serviceTime.value>=12){
+        var aLlowance = parseFloat(formAveragePay * 0.1);
+         var formAge = parseFloat(age.value)
+        nextPay.value = parseFloat(formAveragePay + aLlowance + formAge)
+        allowance.value = aLlowance;
         }
    
         else{
-        var formAllowance= Number(formAvaragePay*0);
-        var formNextPay=Number(formAvaragePay+formAllowance+1*formAge);
-        };
-        if(formAvaragePay<=1500){
-       var formInss = Number(formAvaragePay*5/100);
-       } else if(formAvaragePay>1500 && formAvaragePay<=2500){
-        var formInss = Number(formAvaragePay*10/100);
+        var aLlowance = parseFloat(formAveragePay * 0);
+         var formAge = parseFloat(age.value)
+        nextPay.value = parseFloat(formAveragePay + aLlowance + formAge)
+        allowance.value = aLlowance;
+        }
+        if(nextPay.value<=1500){
+       inss.value = parseFloat(nextPay.value*0.05);
+       } else if(nextPay.value<=2500){
+        inss.value = parseFloat(nextPay.value*0.1);
        
-   } else if(formAvaragePay>2500 && formAvaragePay<=3500){
-    var formInss = Number(formAvaragePay*13/100);
-   } else if(formAvaragePay>3500) {
-    var formInss = Number(formAvaragePay*15/100);
+   } else if(nextPay.value<=3500){
+    inss.value = parseFloat(nextPay.value*0.13);
+   } else{
+    inss.value =parseFloat(nextPay.value*0.15);
  
    };
         
@@ -167,16 +165,19 @@
              * 7) Ao clicar no botão [Gerar relatório], execute a 'Função sem nome'.
              */
             btnRel.onclick = function () {
+            var relatorio = (`
+                Nome do funcionário: ${nome.value}.<br>
+                Tempo de serviço: ${serviceTime.value} meses.<br>
+                Salário médio: R$ ${formAveragePay}.<br>
+                Idade: ${age.value} anos.<br>
+                Abono: R$ ${aLlowance}.<br>
+                INSS: R$ ${inss.value}.<br>
+                Próximo pagamento: R$ ${nextPay.value}.
+                `);
+                relOutput.value = relatorio;
+                output.innerHTML = relOutput.value;
 
-                output.innetHTML=`
-                Nome do funcionário: ${formName}.<br>
-                Tempo de serviço: ${ServiceTime} meses.<br>
-                Salário médio: R$ ${formAvaragePay}.<br>
-                Idade: ${formAge} anos.<br>
-                Abono: R$ ${formAllowance}.<br>
-                INSS: R$ ${formInss}.<br>
-                Próximo pagamento: R$ |${formNextPay}.
-                `;
+               
 
                 /**
                  * 8) Crie uma variável contendo um relatório simples com todos os dados 
